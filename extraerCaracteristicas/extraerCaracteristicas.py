@@ -4,6 +4,7 @@ def extraerCaracteristica(name, factor):
     import cv2
     import csv
     import string
+    
     #abro imagen y la muestro
     print name    
     img = cv2.imread(name,0)
@@ -35,7 +36,7 @@ def extraerCaracteristica(name, factor):
             	surf.extended = False
             	kp, descritors = surf.detectAndCompute(aux,None)
             	if descritors != None:
-                    	writer.writerow(['bloque',i*factor+j,'numero descriptores', len(descritors)])                
+                    	#writer.writerow(['bloque',i*factor+j,'numero descriptores', len(descritors)])                
                     	writer.writerows(descritors)
    
 import os
